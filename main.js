@@ -3,7 +3,7 @@ const goldImg = document.querySelector('.output-section img');
 
 startButton.addEventListener('click', () => {
   const inputImg = document.createElement('img');
-  inputImg.src = 'potato.jpg';
+  inputImg.src = 'potato.png';
   inputImg.classList.add('input-img');
   document.querySelector('.input-section').appendChild(inputImg);
 

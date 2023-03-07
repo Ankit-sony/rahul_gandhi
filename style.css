@@ -1,6 +1,7 @@
 body{
 	margin: 50px;
 	padding: 50px;
+	background-color: #e3e2cb;
 }
 .container {
 	display: flex;
@@ -8,7 +9,11 @@ body{
 	align-items: center;
 	justify-content: center;
 	height: 80vh;
-	background-color: #f2f2f2;
+	background-image: url(Rahul.png);
+	background-color: #e3e2cb;
+opacity: 1;
+background-image: radial-gradient(#322727 2px, #e3e2cb 2px);
+background-size: 40px 40px;
   }
   
   .input-section {
@@ -32,6 +37,23 @@ body{
 	/* background-image: url('machine.png'); */
 	background-size: cover;
   }
+  .machine img {
+	animation: shake 0.5s infinite;
+  }
+
+  @keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
   
   .output-section {
 	position: relative;
@@ -50,24 +72,20 @@ body{
   @keyframes input-animation {
 	0% {
 	  transform: translateY(0);
-	  opacity: 0;
-	}
-	50% {
-	  transform: translateY(-150px);
 	  opacity: 1;
 	}
 	100% {
-	  transform: translateY(0);
+	  transform: translateY(150px);
 	  opacity: 0;
 	}
+	/* 100% {
+	  transform: translateY(0);
+	  opacity: 0;
+	} */
   }
   
   @keyframes output-animation {
 	0% {
-	  transform: translateY(0);
-	  opacity: 1;
-	}
-	50% {
 	  transform: translateY(-150px);
 	  opacity: 0;
 	}
@@ -75,6 +93,10 @@ body{
 	  transform: translateY(0);
 	  opacity: 1;
 	}
+	/* 100% {
+	  transform: translateY(0);
+	  opacity: 1;
+	} */
   }
   
   #start-button {
